@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="#" />  
-    <title>Categorías</title>
+    <title>Productos</title>
       
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -20,36 +20,17 @@
       
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">  
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-
   </head>
     
   <body> 
      <header>
-     <h3 class='text-center'>Tabla Categorías</h3>
-     </header>
-     <br>
-     <div class="container w-75 mt-5 rounded">
-        <div class="row align-items-stretch">
-            <div class="col d-none d-lg-block col-md-5 col-lg-5 col-xl-6">
-                <a href="/crud_2020_ajax/index.php">Index</a>
-            </div>
-            <div class="col d-none d-lg-block col-md-5 col-lg-5 col-xl-6">
-                <a href="/crud_2020_ajax/index.php">Index</a>
-            </div> 
-            <div class="col d-none d-lg-block col-md-5 col-lg-5 col-xl-6">
-                <a href="/crud_2020_ajax/index.php">Index</a>
-            </div> 
-            <div class="col d-none d-lg-block col-md-5 col-lg-5 col-xl-6">
-                <a href="/crud_2020_ajax/index.php">Index</a>
-            </div> 
-        </div>
-     </div>
-     <br>
+     <h3 class='text-center'></h3>
+     </header>    
+      
     <div class="container">
         <div class="row">
             <div class="col-lg-12">            
-            <button id="btnNuevo" type="button" class="btn btn-info" data-toggle="modal"><i class='bx bx-add-to-queue'></i></button>    
+            <button id="btnNuevo" type="button" class="btn btn-info" data-toggle="modal"><i class="material-icons">library_add</i></button>    
             </div>    
         </div>    
     </div>    
@@ -59,12 +40,17 @@
         <div class="row">
             <div class="col-lg-12">
             <div class="table-responsive">        
-                <table id="tablaCategorias" class="table table-striped table-bordered table-condensed" style="width:100%" >
+                <table id="tablaProductos" class="table table-striped table-bordered table-condensed" style="width:100%" >
                     <thead class="text-center">
                         <tr>
-                            <th>Id</th>
-                            <th>Nombre</th>
-                            <th>Descripción</th>                                
+                            <th>Id Producto</th>
+                            <th>Nombre Producto</th>
+                            <th>Area</th>                                
+                            <th>Descripción</th>  
+                            <th>Id Categoría</th>
+                            <th>Estock min</th>
+                            <th>Unidad</th>
+                            <th>Existencia</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -85,22 +71,56 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
             </div>
-        <form id="formCategorias">    
+        <form id="formProductos">    
             <div class="modal-body">
                 <div class="row">
                     <div class="col-lg-6">
                     <div class="form-group">
-                    <label for="" class="col-form-label">Nombre:</label>
-                    <input type="text" class="form-control" id="nombre">
+                    <label for="" class="col-form-label">Nombre Producto:</label>
+                    <input type="text" class="form-control" id="nombre_prod">
                     </div>
                     </div>
                     <div class="col-lg-6">
                     <div class="form-group">
-                    <label for="" class="col-form-label">Descripción</label>
-                    <input type="text" class="form-control" id="descripcion">
+                    <label for="" class="col-form-label">Area</label>
+                    <input type="text" class="form-control" id="area">
                     </div> 
                     </div>    
-                </div>               
+                </div>
+                <div class="row"> 
+                    <div class="col-lg-6">
+                    <div class="form-group">
+                    <label for="" class="col-form-label">Descripción</label>
+                    <input type="text" class="form-control" id="descripcion">
+                    </div>               
+                    </div>
+                    <div class="col-lg-3">
+                    <div class="form-group">
+                    <label for="" class="col-form-label">Id Categoría</label>
+                    <input type="number" class="form-control" id="id_categoria">
+                    </div>
+                    </div>  
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                        <label for="" class="col-form-label">Estock min</label>
+                        <input type="number" class="form-control" id="estock_min">
+                        </div>
+                    </div>    
+                    <div class="col-lg-3">    
+                        <div class="form-group">
+                        <label for="" class="col-form-label">Unidad</label>
+                        <input type="text" class="form-control" id="unidad">
+                        </div>            
+                    </div>    
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                        <label for="" class="col-form-label">Existencia</label>
+                        <input type="number" class="form-control" id="existencia">
+                        </div>
+                    </div>  
+                </div>                
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
@@ -119,7 +139,7 @@
     <!-- datatables JS -->
     <script type="text/javascript" src="assets/datatables/datatables.min.js"></script>    
      
-    <script type="text/javascript" src="mainCategorias.js"></script>  
+    <script type="text/javascript" src="mainProductos.js"></script>  
     
     
   </body>
