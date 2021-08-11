@@ -72,7 +72,7 @@
                 <div class="row">
                     <div class="col-lg-3">
                     <div class="form-group">
-                    <label for="" class="col-form-label">Id del Producto</label>
+                    <label for="" class="col-form-label">Id Producto</label>
                     <input type="number" class="form-control" id="id_prod">
                     </div>
                     </div>

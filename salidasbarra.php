@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="#" />  
-    <title>Salidas</title>
+    <title>Salidas Barra</title>
       
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -48,7 +48,6 @@
                             <th>Cantidad</th>                                
                             <th>Fecha de Salida</th>
                             <th>Usuario</th>
-                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>                           
@@ -110,7 +109,7 @@
     <!-- datatables JS -->
     <script type="text/javascript" src="assets/datatables/datatables.min.js"></script>    
      
-    <script type="text/javascript" src="mainSalidas.js"></script>  
+    <script type="text/javascript" src="mainSalidasbarra.js"></script>  
     
     
   </body>
