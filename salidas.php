@@ -45,9 +45,10 @@
                         <tr>
                             <th>Id</th>
                             <th>Id_Producto</th>
-                            <th>Cantidad</th>  
-                            <th>Día_Entrada</th>
-                            <th>Mes_Entrada</th>
+                            <th>Cantidad</th> 
+                            <th>Fecha_Salida</th>
+                            <th>Usuario</th>
+                            <th>Caducidad</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -87,17 +88,19 @@
                 <div class="row"> 
                     <div class="col-lg-6">
                     <div class="form-group">
-                    <label for="" class="col-form-label">Día_Salida</label>
-                    <input type="number" class="form-control" id="dia">
-                    </div>               
-                    </div>
-                    <div class="col-lg-6">
-                    <div class="form-group">
-                    <label for="" class="col-form-label">Mes_Salida</label>
-                    <input type="text" class="form-control" id="mes">
+                    <label for="" class="col-form-label">Fecha_Salida</label>
+                    <input type="date" class="form-control" id="salida">
                     </div>
                     </div>  
-                </div>            
+                </div>    
+                <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                    <label for="" class="col-form-label">Caducidad</label>
+                    <input type="date" class="form-control" id="caducidad">
+                    </div>
+                    </div>
+                </div>       
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
