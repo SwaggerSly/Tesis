@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var id_salida, opcion;
+    var id_entrada, opcion;
     opcion = 4;
         
     tablaEntradas = $('#tablaEntradas').DataTable({  
@@ -10,7 +10,7 @@ $(document).ready(function() {
             "dataSrc":""
         },
         "columns":[
-            {"data": "id_salida"},
+            {"data": "id_entrada"},
             {"data": "id_prod"},
             {"data": "cantidad"},
             {"data": "dia"},
@@ -31,7 +31,7 @@ $(document).ready(function() {
               url: "bd/crudentradas.php",
               type: "POST",
               datatype:"json",    
-              data:  {id_salida:id_salida, id_prod:id_prod, cantidad:cantidad, dia:dia, mes:mes, opcion:opcion},    
+              data:  {id_entrada:id_entrada, id_prod:id_prod, cantidad:cantidad, dia:dia, mes:mes, opcion:opcion},    
               success: function(data) {
                 tablaEntradas.ajax.reload(null, false);
                }
@@ -44,7 +44,7 @@ $(document).ready(function() {
     //para limpiar los campos antes de dar de Alta una Persona
     $("#btnNuevo").click(function(){
         opcion = 1; //alta           
-        id_salida=null;
+        id_entrada=null;
         $("#formEntradas").trigger("reset");
         $(".modal-header").css( "background-color", "#17a2b8");
         $(".modal-header").css( "color", "white" );
@@ -56,7 +56,7 @@ $(document).ready(function() {
     $(document).on("click", ".btnEditar", function(){		        
         opcion = 2;//editar
         fila = $(this).closest("tr");	        
-        id_salida = parseInt(fila.find('td:eq(0)').text()); //capturo el ID		            
+        id_entrada = parseInt(fila.find('td:eq(0)').text()); //capturo el ID		            
         id_prod = fila.find('td:eq(1)').text();
         cantidad = fila.find('td:eq(2)').text();
         dia = fila.find('td:eq(3)').text();
@@ -74,15 +74,15 @@ $(document).ready(function() {
     //Borrar
     $(document).on("click", ".btnBorrar", function(){
         fila = $(this);           
-        id_salida = parseInt($(this).closest('tr').find('td:eq(0)').text()) ;		
+        id_entrada = parseInt($(this).closest('tr').find('td:eq(0)').text()) ;		
         opcion = 3; //eliminar        
-        var respuesta = confirm("¿Está seguro de borrar el registro "+id_salida+"?");                
+        var respuesta = confirm("¿Está seguro de borrar el registro "+id_entrada+"?");                
         if (respuesta) {            
             $.ajax({
               url: "bd/crudentradas.php",
               type: "POST",
               datatype:"json",    
-              data:  {opcion:opcion, id_salida:id_salida},    
+              data:  {opcion:opcion, id_entrada:id_entrada},    
               success: function() {
                   tablaEntradas.row(fila.parents('tr')).remove().draw();                  
                }
