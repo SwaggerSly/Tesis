@@ -11,6 +11,7 @@ $estock_min = (isset($_POST['estock_min'])) ? $_POST['estock_min'] : '';
 $unidad = (isset($_POST['unidad'])) ? $_POST['unidad'] : '';
 $existencia = (isset($_POST['existencia'])) ? $_POST['existencia'] : '';
 
+
 $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
 $id_prod = (isset($_POST['id_prod'])) ? $_POST['id_prod'] : '';
 
@@ -27,7 +28,7 @@ switch($opcion){
         $data=$resultado->fetchAll(PDO::FETCH_ASSOC);       
         break;    
     case 2:        
-        $consulta = "UPDATE productos SET nombre_prod='$nombre_prod', area='$area', descripcion='$descripcion', id_categoria='$id_categoria', estock_min='$estock_min', unidad='$unidad' ,existencia='$existencia' WHERE id_prod='$id_prod' ";		
+        $consulta = "UPDATE productos SET nombre_prod='$nombre_prod', area='$area', descripcion='$descripcion', id_categoria='$id_categoria', estock_min='$estock_min', unidad='$unidad', existencia='$existencia' WHERE id_prod='$id_prod' ";		
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();        
         

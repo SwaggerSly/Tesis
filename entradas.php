@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="#" />  
-    <title>Productos</title>
+    <title>Entradas</title>
       
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -40,17 +40,14 @@
         <div class="row">
             <div class="col-lg-12">
             <div class="table-responsive">        
-                <table id="tablaProductos" class="table table-striped table-bordered table-condensed" style="width:100%" >
+                <table id="tablaEntradas" class="table table-striped table-bordered table-condensed" style="width:100%" >
                     <thead class="text-center">
                         <tr>
                             <th>Id</th>
-                            <th>Producto</th>
-                            <th>Area</th>                                
-                            <th>Descripción</th>  
-                            <th>Categoría</th>
-                            <th>Stock_min</th>
-                            <th>Unidad</th>
-                            <th>Unidad</th>
+                            <th>Id_Producto</th>
+                            <th>Cantidad</th>  
+                            <th>Día_Entrada</th>
+                            <th>Mes_Entrada</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -71,56 +68,36 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
             </div>
-        <form id="formProductos">    
+        <form id="formEntradas">    
             <div class="modal-body">
                 <div class="row">
                     <div class="col-lg-6">
                     <div class="form-group">
-                    <label for="" class="col-form-label">Producto</label>
-                    <input type="text" class="form-control" id="nombre_prod">
+                    <label for="" class="col-form-label">Id_Producto</label>
+                    <input type="number" class="form-control" id="id_prod">
                     </div>
                     </div>
                     <div class="col-lg-6">
                     <div class="form-group">
-                    <label for="" class="col-form-label">Área</label>
-                    <input type="text" class="form-control" id="area">
+                    <label for="" class="col-form-label">Cantidad</label>
+                    <input type="number" class="form-control" id="cantidad">
                     </div> 
                     </div>    
                 </div>
                 <div class="row"> 
                     <div class="col-lg-6">
                     <div class="form-group">
-                    <label for="" class="col-form-label">Descripción</label>
-                    <input type="text" class="form-control" id="descripcion">
+                    <label for="" class="col-form-label">Día_Entrada</label>
+                    <input type="number" class="form-control" id="dia">
                     </div>               
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-6">
                     <div class="form-group">
-                    <label for="" class="col-form-label">Id_Categoría</label>
-                    <input type="number" class="form-control" id="id_categoria">
+                    <label for="" class="col-form-label">Mes_Entrada</label>
+                    <input type="text" class="form-control" id="mes">
                     </div>
                     </div>  
-                </div>
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="form-group">
-                        <label for="" class="col-form-label">Estock_min</label>
-                        <input type="number" class="form-control" id="estock_min">
-                        </div>
-                    </div>    
-                    <div class="col-lg-3">    
-                        <div class="form-group">
-                        <label for="" class="col-form-label">Unidad</label>
-                        <input type="text" class="form-control" id="unidad">
-                        </div>
-                    </div>
-                    <div class="col-lg-3">    
-                        <div class="form-group">
-                        <label for="" class="col-form-label">Existencia</label>
-                        <input type="number" class="form-control" id="existencia">
-                        </div>
-                    </div>
-                </div>                
+                </div>            
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
@@ -139,7 +116,7 @@
     <!-- datatables JS -->
     <script type="text/javascript" src="assets/datatables/datatables.min.js"></script>    
      
-    <script type="text/javascript" src="mainProductos.js"></script>  
+    <script type="text/javascript" src="mainEntradas.js"></script>  
     
     
   </body>

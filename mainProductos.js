@@ -31,13 +31,13 @@ $(document).ready(function() {
         descripcion = $.trim($('#descripcion').val());    
         id_categoria = $.trim($('#id_categoria').val());    
         estock_min = $.trim($('#estock_min').val());
-        unidad = $.trim($('#unidad').val());
-        existencia = $.trim($('existencia').val());                            
+        unidad = $.trim($('#unidad').val());                            
+        existencia = $.trim($('#existencia').val());
             $.ajax({
               url: "bd/crudproductos.php",
               type: "POST",
               datatype:"json",    
-              data:  {id_prod:id_prod, nombre_prod:nombre_prod, area:area, descripcion:descripcion, id_categoria:id_categoria, estock_min:estock_min ,unidad:unidad ,existencia:existencia, opcion:opcion},    
+              data:  {id_prod:id_prod, nombre_prod:nombre_prod, area:area, descripcion:descripcion, id_categoria:id_categoria, estock_min:estock_min ,unidad:unidad ,existencia:existencia , opcion:opcion},    
               success: function(data) {
                 tablaProductos.ajax.reload(null, false);
                }
@@ -54,7 +54,7 @@ $(document).ready(function() {
         $("#formProductos").trigger("reset");
         $(".modal-header").css( "background-color", "#17a2b8");
         $(".modal-header").css( "color", "white" );
-        $(".modal-title").text("Alta de Usuario");
+        $(".modal-title").text("Alta de Producto");
         $('#modalCRUD').modal('show');	    
     });
     
@@ -69,7 +69,7 @@ $(document).ready(function() {
         id_categoria = fila.find('td:eq(4)').text();
         estock_min = fila.find('td:eq(5)').text();
         unidad = fila.find('td:eq(6)').text();
-        existencia = fila.find('td:eq(7)').text();        
+        existencia = fila.find('td:eq(7)').text();
         $("#nombre_prod").val(nombre_prod);
         $("#area").val(area);
         $("#descripcion").val(descripcion);
@@ -79,7 +79,7 @@ $(document).ready(function() {
         $("#existencia").val(existencia);
         $(".modal-header").css("background-color", "#007bff");
         $(".modal-header").css("color", "white" );
-        $(".modal-title").text("Editar Usuario");		
+        $(".modal-title").text("Editar Producto");		
         $('#modalCRUD').modal('show');		   
     });
     
