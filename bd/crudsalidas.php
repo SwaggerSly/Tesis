@@ -7,8 +7,6 @@ $id_prod = (isset($_POST['id_prod'])) ? $_POST['id_prod'] : '';
 $cantidad = (isset($_POST['cantidad'])) ? $_POST['cantidad'] : '';
 $salida = (isset($_POST['salida'])) ? $_POST['salida'] : '';
 $user = (isset($_POST['user'])) ? $_POST['user'] : '';
-$caducidad = (isset($_POST['caducidad'])) ? $_POST['caducidad'] : '';
-
 
 $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
 $id_salida = (isset($_POST['id_salida'])) ? $_POST['id_salida'] : '';
@@ -16,7 +14,7 @@ $id_salida = (isset($_POST['id_salida'])) ? $_POST['id_salida'] : '';
 
 switch($opcion){
     case 1:
-        $consulta = "INSERT INTO salidas (id_prod, cantidad, salida, user, caducidad) VALUES('$id_prod', '$cantidad', '$salida', '1', '$caducidad') ";			
+        $consulta = "INSERT INTO salidas (id_prod, cantidad, salida, user) VALUES('$id_prod', '$cantidad', '$salida', '1') ";			
         $resultado = $conexion->prepare($consulta);
         $resultado->execute(); 
         
@@ -26,7 +24,7 @@ switch($opcion){
         $data=$resultado->fetchAll(PDO::FETCH_ASSOC);       
         break;    
     case 2:        
-        $consulta = "UPDATE salidas SET id_prod='$id_prod', cantidad='$cantidad', salida='$salida', user='1', caducidad='$caducidad' WHERE id_salida='$id_salida' ";		
+        $consulta = "UPDATE salidas SET id_prod='$id_prod', cantidad='$cantidad', salida='$salida', user='1' WHERE id_salida='$id_salida' ";		
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();        
         

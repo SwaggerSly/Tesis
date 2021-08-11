@@ -44,11 +44,10 @@
                     <thead class="text-center">
                         <tr>
                             <th>Id</th>
-                            <th>Id_Producto</th>
-                            <th>Cantidad</th> 
-                            <th>Fecha_Salida</th>
+                            <th>Id del Producto</th>
+                            <th>Cantidad</th>                                
+                            <th>Fecha de Salida</th>
                             <th>Usuario</th>
-                            <th>Caducidad</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -57,7 +56,7 @@
                 </table>               
             </div>
             </div>
-        </div>  
+        </div> 
     </div>   
 
 <!--Modal para CRUD-->
@@ -72,13 +71,13 @@
         <form id="formSalidas">    
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-3">
                     <div class="form-group">
-                    <label for="" class="col-form-label">Id_Producto</label>
+                    <label for="" class="col-form-label">Id del Producto</label>
                     <input type="number" class="form-control" id="id_prod">
                     </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-3">
                     <div class="form-group">
                     <label for="" class="col-form-label">Cantidad</label>
                     <input type="number" class="form-control" id="cantidad">
@@ -88,19 +87,11 @@
                 <div class="row"> 
                     <div class="col-lg-6">
                     <div class="form-group">
-                    <label for="" class="col-form-label">Fecha_Salida</label>
+                    <label for="" class="col-form-label">Fecha de Salida</label>
                     <input type="date" class="form-control" id="salida">
-                    </div>
-                    </div>  
-                </div>    
-                <div class="row">
-                <div class="col-lg-6">
-                    <div class="form-group">
-                    <label for="" class="col-form-label">Caducidad</label>
-                    <input type="date" class="form-control" id="caducidad">
-                    </div>
-                    </div>
-                </div>       
+                    </div>               
+                    </div> 
+                </div>                
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>

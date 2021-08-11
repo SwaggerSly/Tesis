@@ -13,8 +13,9 @@ $(document).ready(function() {
             {"data": "id_entrada"},
             {"data": "id_prod"},
             {"data": "cantidad"},
-            {"data": "dia"},
-            {"data": "mes"},
+            {"data": "entrada"},
+            {"data": "caducidad"},
+            {"data": "user"},
             {"defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-primary btn-sm btnEditar'><i class='material-icons'>edit</i></button><button class='btn btn-danger btn-sm btnBorrar'><i class='material-icons'>delete</i></button></div></div>"}
         ]
     });     
@@ -25,13 +26,14 @@ $(document).ready(function() {
         e.preventDefault(); //evita el comportambiento normal del submit, es decir, recarga total de la página
         id_prod = $.trim($('#id_prod').val());    
         cantidad = $.trim($('#cantidad').val());
-        dia = $.trim($('#dia').val());    
-        mes = $.trim($('#mes').val());    
+        entrada = $.trim($('#entrada').val());
+        caducidad = $.trim($('#caducidad').val());    
+        user = $.trim($('#user').val());                                
             $.ajax({
               url: "bd/crudentradas.php",
               type: "POST",
               datatype:"json",    
-              data:  {id_entrada:id_entrada, id_prod:id_prod, cantidad:cantidad, dia:dia, mes:mes, opcion:opcion},    
+              data:  {id_entrada:id_entrada, id_prod:id_prod, cantidad:cantidad, entrada:entrada, caducidad:caducidad, user:user,opcion:opcion},    
               success: function(data) {
                 tablaEntradas.ajax.reload(null, false);
                }
@@ -48,7 +50,7 @@ $(document).ready(function() {
         $("#formEntradas").trigger("reset");
         $(".modal-header").css( "background-color", "#17a2b8");
         $(".modal-header").css( "color", "white" );
-        $(".modal-title").text("Alta de Entrada");
+        $(".modal-title").text("Registrar Entrada");
         $('#modalCRUD').modal('show');	    
     });
     
@@ -59,15 +61,17 @@ $(document).ready(function() {
         id_entrada = parseInt(fila.find('td:eq(0)').text()); //capturo el ID		            
         id_prod = fila.find('td:eq(1)').text();
         cantidad = fila.find('td:eq(2)').text();
-        dia = fila.find('td:eq(3)').text();
-        mes = fila.find('td:eq(4)').text();
+        entrada = fila.find('td:eq(3)').text();
+        caducidad = fila.find('td:eq(4)').text();
+        user = fila.find('td:eq(5)').text();
         $("#id_prod").val(id_prod);
         $("#cantidad").val(cantidad);
-        $("#dia").val(dia);
-        $("#mes").val(mes);
+        $("#entrada").val(entrada);
+        $("#caducidad").val(caducidad);
+        $("#user").val(user);
         $(".modal-header").css("background-color", "#007bff");
         $(".modal-header").css("color", "white" );
-        $(".modal-title").text("Editar Producto");		
+        $(".modal-title").text("Editar Entrada");		
         $('#modalCRUD').modal('show');		   
     });
     

@@ -44,10 +44,11 @@
                     <thead class="text-center">
                         <tr>
                             <th>Id</th>
-                            <th>Id_Producto</th>
-                            <th>Cantidad</th>  
-                            <th>Día_Entrada</th>
-                            <th>Mes_Entrada</th>
+                            <th>Id del Producto</th>
+                            <th>Cantidad</th>                                
+                            <th>Fecha de Entrada</th>
+                            <th>Caducidad</th>
+                            <th>Usuario</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -56,7 +57,7 @@
                 </table>               
             </div>
             </div>
-        </div>  
+        </div> 
     </div>   
 
 <!--Modal para CRUD-->
@@ -71,13 +72,13 @@
         <form id="formEntradas">    
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-3">
                     <div class="form-group">
                     <label for="" class="col-form-label">Id_Producto</label>
                     <input type="number" class="form-control" id="id_prod">
                     </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-3">
                     <div class="form-group">
                     <label for="" class="col-form-label">Cantidad</label>
                     <input type="number" class="form-control" id="cantidad">
@@ -87,17 +88,17 @@
                 <div class="row"> 
                     <div class="col-lg-6">
                     <div class="form-group">
-                    <label for="" class="col-form-label">Día_Entrada</label>
-                    <input type="number" class="form-control" id="dia">
+                    <label for="" class="col-form-label">Fecha de Entrada</label>
+                    <input type="date" class="form-control" id="entrada">
                     </div>               
                     </div>
                     <div class="col-lg-6">
                     <div class="form-group">
-                    <label for="" class="col-form-label">Mes_Entrada</label>
-                    <input type="text" class="form-control" id="mes">
-                    </div>
-                    </div>  
-                </div>            
+                    <label for="" class="col-form-label">Caducidad</label>
+                    <input type="date" class="form-control" id="caducidad">
+                    </div>               
+                    </div> 
+                </div>                
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>

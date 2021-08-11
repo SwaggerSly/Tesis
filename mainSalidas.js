@@ -15,7 +15,6 @@ $(document).ready(function() {
             {"data": "cantidad"},
             {"data": "salida"},
             {"data": "user"},
-            {"data": "caducidad"},
             {"defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-primary btn-sm btnEditar'><i class='material-icons'>edit</i></button><button class='btn btn-danger btn-sm btnBorrar'><i class='material-icons'>delete</i></button></div></div>"}
         ]
     });     
@@ -25,15 +24,14 @@ $(document).ready(function() {
     $('#formSalidas').submit(function(e){                         
         e.preventDefault(); //evita el comportambiento normal del submit, es decir, recarga total de la página
         id_prod = $.trim($('#id_prod').val());    
-        cantidad = $.trim($('#cantidad').val());  
+        cantidad = $.trim($('#cantidad').val());
         salida = $.trim($('#salida').val());    
-        user = $.trim($('#user').val());
-        caducidad = $.trim($('#caducidad').val());
+        user = $.trim($('#user').val());                                
             $.ajax({
               url: "bd/crudsalidas.php",
               type: "POST",
               datatype:"json",    
-              data:  {id_salida:id_salida, id_prod:id_prod, cantidad:cantidad, salida:salida, user:user, caducidad:caducidad, opcion:opcion},    
+              data:  {id_salida:id_salida, id_prod:id_prod, cantidad:cantidad, salida:salida, user:user,opcion:opcion},    
               success: function(data) {
                 tablaSalidas.ajax.reload(null, false);
                }
@@ -50,7 +48,7 @@ $(document).ready(function() {
         $("#formSalidas").trigger("reset");
         $(".modal-header").css( "background-color", "#17a2b8");
         $(".modal-header").css( "color", "white" );
-        $(".modal-title").text("Alta de Salida");
+        $(".modal-title").text("Registrar Salida");
         $('#modalCRUD').modal('show');	    
     });
     
@@ -61,14 +59,12 @@ $(document).ready(function() {
         id_salida = parseInt(fila.find('td:eq(0)').text()); //capturo el ID		            
         id_prod = fila.find('td:eq(1)').text();
         cantidad = fila.find('td:eq(2)').text();
-        salida = fila.find('td:eq(4)').text();
-        user = fila.find('td:eq(5)').text();
-        caducidad = fila.find('td:eq(6)').text();
+        salida = fila.find('td:eq(3)').text();
+        user = fila.find('td:eq(4)').text();
         $("#id_prod").val(id_prod);
         $("#cantidad").val(cantidad);
         $("#salida").val(salida);
         $("#user").val(user);
-        $("#caducidad").val(caducidad);
         $(".modal-header").css("background-color", "#007bff");
         $(".modal-header").css("color", "white" );
         $(".modal-title").text("Editar Salida");		
