@@ -50,7 +50,7 @@
                             <th>Categoría</th>
                             <th>Stock_min</th>
                             <th>Unidad</th>
-                            <th>Unidad</th>
+                            <th>Existencia</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
