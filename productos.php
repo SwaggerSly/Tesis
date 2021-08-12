@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if($_SESSION["s_usuario"] === null){
+    header("Location: ../index.php");
+    include_once '../bd/conexion.php';
+}
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -18,15 +27,45 @@
     <!--datables estilo bootstrap 4 CSS-->  
     <link rel="stylesheet"  type="text/css" href="assets/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">    
       
+    <!-- Iconos y fuentes -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">  
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'> 
   </head>
     
   <body> 
      <header>
-     <h3 class='text-center'>Tabla de Productos</h3>
+     <!-- NavBar -->
+     <nav id="myLinks" class="navbar navbar-expand-sm navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="categorias.php">Categorías</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="productos.php">Productos</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="entradas.php">Entradas</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="salidas.php">Salidas</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Usuario  <span class="badge badge-light"><?php echo $_SESSION["s_usuario"];?></span></a>
+                </li>
+                <li>
+                <a class="btn btn-danger" href="/crud_2020_ajax/bd/logout.php" role="button"><i class='bx bx-log-out' id="log_out" ></i>
+                </a>
+                </li>
+            </ul>
+            </div>
+        </div>
+     </nav>
      </header>    
-      
+      <br>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">            
