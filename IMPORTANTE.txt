@@ -1,0 +1,7 @@
+La base de datos se llama usuarios_db
+
+usuarios de prueben la base de datos
+usuario:admin pass:12345
+usuario:cocina pass:cocina
+usuario:piso pass:piso
+usuario:barra pass:barra
