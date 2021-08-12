@@ -29,7 +29,7 @@ if($_SESSION["s_usuario"] === null){
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <!-- CSS personalizado --> 
-    <link rel="stylesheet" href="main.css">
+    <!-- <link rel="stylesheet" href="main.css"> -->
       
     <!--datables CSS básico-->
     <link rel="stylesheet" type="text/css" href="assets/datatables/datatables.min.css"/>
@@ -40,12 +40,32 @@ if($_SESSION["s_usuario"] === null){
       rel="stylesheet">  
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
+    <style>
+        body{
+        background-color:#ffffff;
+        
+        }
+        table.dataTable thead {
+            background: linear-gradient(to right, #f12711, #f5af19);
+            color:white;
+        }
+
+        .caja{
+        /* border: 1px solid; */
+        padding: 5px;
+        box-shadow: 10px 10px 50px 1px #7c7c81;
+        border-radius: 10px;
+        }
+        .bg {
+            background: linear-gradient(to right, #f12711, #f5af19);
+        }
+    </style>
   </head>
     
   <body> 
      <header>
         <!-- NavBar -->
-        <nav id="myLinks" class="navbar navbar-expand-sm navbar-dark bg-primary">
+        <nav id="myLinks" class="navbar navbar-expand-sm navbar-dark bg">
         <div class="container-fluid">
             <a class="navbar-brand" href="categorias.php">Categorías</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
@@ -66,7 +86,7 @@ if($_SESSION["s_usuario"] === null){
                 <a class="nav-link" href="#">Usuario  <span class="badge badge-light"><?php echo $_SESSION["s_usuario"];?></span></a>
                 </li>
                 <li>
-                <a class="btn btn-danger" href="/crud_2020_ajax/bd/logout.php" role="button"><i class='bx bx-log-out' id="log_out" ></i>
+                <a class="btn btn-danger" href="/Tesis/bd/logout.php" role="button"><i class='bx bx-log-out' id="log_out" ></i>
                 </a>
                 </li>
             </ul>

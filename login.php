@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 
-    <link rel="stylesheet" href="/crud_2020_ajax/assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/crud_2020_ajax/assets/sweetalert2/sweetalert2.min.css">
+    <link rel="stylesheet" href="/Tesis/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Tesis/assets/sweetalert2/sweetalert2.min.css">
 
     <!-- Estilo de primer columna -->
     <style>
         body{
             background: #ff6b31;
-            background: linear-gradient(to right, #f77b29, #ffe259);
+            background: linear-gradient(to right, #22c1c3, #fdbb2d);
             /* background: radial-gradient(to left, #ffe259, #f77b29); */
         }
         .bg{
-            background-image: url(/crud_2020_ajax/assets/images/wallhaven-5wper9.jpg);
+            background-image: url(/Tesis/assets/images/wallhaven-5wper9.jpg);
             background-position: center center;
         }
     </style>
@@ -32,7 +32,7 @@
             <!-- Logotyope and welcome text -->
             <div class="col bg-white p-5 rounded-end rounded-start">
                 <div class="text-center">
-                    <img src="/crud_2020_ajax/assets/images/logo-removebg-preview2.png" width="128" alt="">
+                    <img src="/Tesis/assets/images/logo-removebg-preview2.png" width="128" alt="">
                 </div>
 
                 <h2 class="fw-bold text-center pt-10 mb-8">La Huarachera de Coyoacán</h2>
@@ -58,10 +58,10 @@
         </div>
     </div>
 
-        <script src="/crud_2020_ajax/assets/jquery/jquery-3.3.1.min.js"></script>
-        <script src="/crud_2020_ajax/assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="/crud_2020_ajax/assets/popper/popper.min.js"></script>
-        <script src="/crud_2020_ajax/assets/sweetalert2/sweetalert2.all.min.js"></script>
-        <script src="/crud_2020_ajax/codigo.js"></script>
+        <script src="/Tesis/assets/jquery/jquery-3.3.1.min.js"></script>
+        <script src="/Tesis/assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/Tesis/assets/popper/popper.min.js"></script>
+        <script src="/Tesis/assets/sweetalert2/sweetalert2.all.min.js"></script>
+        <script src="/Tesis/codigo.js"></script>
 </body>
 </html>
