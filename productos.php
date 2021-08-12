@@ -45,7 +45,7 @@ if($_SESSION["s_usuario"] === null){
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="productos.php">Productos</a>
+                <a class="nav-link" aria-current="page" href="productos.php">Productos</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="entradas.php">Entradas</a>
