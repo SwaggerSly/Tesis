@@ -26,30 +26,12 @@
     
   <body> 
      <header>
-     <h3 class='text-center'>Tabla Categorías</h3>
+     <h3 class='text-center'>Tabla de Categorías</h3>
      </header>
-     <br>
-     <div class="container w-75 mt-5 rounded">
-        <div class="row align-items-stretch">
-            <div class="col d-none d-lg-block col-md-5 col-lg-5 col-xl-6">
-                <a href="/crud_2020_ajax/index.php">Index</a>
-            </div>
-            <div class="col d-none d-lg-block col-md-5 col-lg-5 col-xl-6">
-                <a href="/crud_2020_ajax/index.php">Index</a>
-            </div> 
-            <div class="col d-none d-lg-block col-md-5 col-lg-5 col-xl-6">
-                <a href="/crud_2020_ajax/index.php">Index</a>
-            </div> 
-            <div class="col d-none d-lg-block col-md-5 col-lg-5 col-xl-6">
-                <a href="/crud_2020_ajax/index.php">Index</a>
-            </div> 
-        </div>
-     </div>
-     <br>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">            
-            <button id="btnNuevo" type="button" class="btn btn-info" data-toggle="modal"><i class='bx bx-add-to-queue'></i></button>    
+            <button id="btnNuevo" type="button" class="btn btn-info" data-toggle="modal"><i class="material-icons">library_add</i></button>    
             </div>    
         </div>    
     </div>    

@@ -24,7 +24,7 @@
     
   <body> 
      <header>
-     <h3 class='text-center'></h3>
+     <h3 class='text-center'>Registro de Salidas - Barra</h3>
      </header>    
       
     <div class="container">
