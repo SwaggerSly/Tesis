@@ -4,7 +4,17 @@ session_start();
 if($_SESSION["s_usuario"] === null){
     header("Location: ../index.php");
     include_once '../bd/conexion.php';
-}
+}else{
+    if($_SESSION["s_idRol"]!=1){
+      header("Location: salidascocina.php");
+    } if($_SESSION["s_idRol"]!=1 && $_SESSION["s_idRol"]!=2 && $_SESSION["s_idRol"]!=4){
+      header("Location: salidasbarra.php");
+    } else{
+      if($_SESSION["s_idRol"]!=1 && $_SESSION["s_idRol"]!=2 && $_SESSION["s_idRol"]!=3){
+        header("Location: salidaspiso.php");
+      }
+    }
+  }
 ?>
 
 <!doctype html>
@@ -44,7 +54,7 @@ if($_SESSION["s_usuario"] === null){
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="productos.php">Productos</a>
+                <a class="nav-link" aria-current="page" href="productos.php">Productos</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="entradas.php">Entradas</a>
