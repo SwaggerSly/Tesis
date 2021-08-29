@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 if($_SESSION["s_usuario"] === null){
     header("Location: ../index.php");
     include_once '../bd/conexion.php';
@@ -18,32 +17,23 @@ if($_SESSION["s_usuario"] === null){
       
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <!-- CSS personalizado --> 
-    <!-- <link rel="stylesheet" href="main.css">   -->
-      
-      
     <!--datables CSS básico-->
     <link rel="stylesheet" type="text/css" href="assets/datatables/datatables.min.css"/>
     <!--datables estilo bootstrap 4 CSS-->  
     <link rel="stylesheet"  type="text/css" href="assets/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">    
-      
     <!-- Iconos y fuentes -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
     <style>
         body{
         background-color:#ffffff;
-        
         }
         table.dataTable thead {
             background: linear-gradient(to right, #f12711, #f5af19);
             color:white;
         }
-
         .caja{
-        /* border: 1px solid; */
         padding: 5px;
         box-shadow: 10px 10px 50px 1px #7c7c81;
         border-radius: 10px;
@@ -120,65 +110,62 @@ if($_SESSION["s_usuario"] === null){
         </div> 
     </div>   
 
-<!--Modal para CRUD-->
-<div class="modal fade" id="modalCRUD" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-        <form id="formEntradas">    
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-lg-3">
-                    <div class="form-group">
-                    <label for="" class="col-form-label">Id_Producto</label>
-                    <input type="number" class="form-control" id="id_prod">
-                    </div>
-                    </div>
-                    <div class="col-lg-3">
-                    <div class="form-group">
-                    <label for="" class="col-form-label">Cantidad</label>
-                    <input type="number" class="form-control" id="cantidad">
-                    </div> 
-                    </div>    
+    <!--Modal para CRUD-->
+    <div class="modal fade" id="modalCRUD" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div class="row"> 
-                    <div class="col-lg-6">
-                    <div class="form-group">
-                    <label for="" class="col-form-label">Fecha de Entrada</label>
-                    <input type="date" class="form-control" id="entrada">
-                    </div>               
+            <form id="formEntradas">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-3">
+                        <div class="form-group">
+                        <label for="" class="col-form-label">Id_Producto</label>
+                        <input type="number" class="form-control" id="id_prod">
+                        </div>
+                        </div>
+                        <div class="col-lg-3">
+                        <div class="form-group">
+                        <label for="" class="col-form-label">Cantidad</label>
+                        <input type="number" class="form-control" id="cantidad">
+                        </div>
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                    <div class="form-group">
-                    <label for="" class="col-form-label">Caducidad</label>
-                    <input type="date" class="form-control" id="caducidad">
-                    </div>               
-                    </div> 
-                </div>                
+                    <div class="row">
+                        <div class="col-lg-6">
+                        <div class="form-group">
+                        <label for="" class="col-form-label">Fecha de Entrada</label>
+                        <input type="date" class="form-control" id="entrada">
+                        </div>
+                        </div>
+                        <div class="col-lg-6">
+                        <div class="form-group">
+                        <label for="" class="col-form-label">Caducidad</label>
+                        <input type="date" class="form-control" id="caducidad">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" id="btnGuardar" class="btn btn-dark">Guardar</button>
+                </div>
+            </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
-                <button type="submit" id="btnGuardar" class="btn btn-dark">Guardar</button>
-            </div>
-        </form>    
         </div>
     </div>
-</div>  
       
     <!-- jQuery, Popper.js, Bootstrap JS -->
     <script src="assets/jquery/jquery-3.3.1.min.js"></script>
     <script src="assets/popper/popper.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-      
     <!-- datatables JS -->
-    <script type="text/javascript" src="assets/datatables/datatables.min.js"></script>    
-     
-    <script type="text/javascript" src="mainEntradas.js"></script>  
-    
+    <script type="text/javascript" src="assets/datatables/datatables.min.js"></script>
+    <script type="text/javascript" src="mainEntradas.js"></script>
     
   </body>
 </html>

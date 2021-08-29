@@ -4,14 +4,14 @@ session_start();
 include_once 'conexion.php';
 $objeto = new Conexion();
 $conexion = $objeto->Conectar();
-
+//El comando de abajo se puede utilizar para hacer una prueba de la conexión (para su uso se deben comentar todas las lineas debajo de la línea de abajo)
 //print_r($conexion);
 //recepción de datos enviados mediante POST desde ajax
 $usuario = (isset($_POST['usuario'])) ? $_POST['usuario'] : '';
 $password = (isset($_POST['password'])) ? $_POST['password'] : '';
 
 $pass = md5($password); //encripto la clave enviada por el usuario para compararla con la clava encriptada y almacenada en la BD
-
+//La siguiente consulta se puede sustituir por la línea 17, pero se debe de comentar las línea 17, 25 y 26 y la línea 4 y 5 del documento logout.php
 //$consulta = "SELECT * FROM users WHERE usuario='$usuario' AND password='$pass' ";
 
 $consulta = "SELECT users.idRol AS idRol, roles.descripcion AS rol FROM users JOIN roles ON users.idRol = users.id WHERE usuario='$usuario' AND password='$pass' ";
@@ -31,9 +31,3 @@ if($resultado->rowCount() >= 1){
 
 print json_encode($data);
 $conexion=null;
-
-//usuarios de pruebaen la base de datos
-//usuario:admin pass:12345
-//usuario:cocina pass:cocina
-//usuario:piso pass:piso
-//usuario:barra pass:barra

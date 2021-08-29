@@ -14,7 +14,6 @@
         body{
             background: #ff6b31;
             background: linear-gradient(to right, #22c1c3, #fdbb2d);
-            /* background: radial-gradient(to left, #ffe259, #f77b29); */
         }
         .bg{
             background-image: url(/Tesis/assets/images/wallhaven-5wper9.jpg);
@@ -58,10 +57,10 @@
         </div>
     </div>
 
-        <script src="/Tesis/assets/jquery/jquery-3.3.1.min.js"></script>
-        <script src="/Tesis/assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="/Tesis/assets/popper/popper.min.js"></script>
-        <script src="/Tesis/assets/sweetalert2/sweetalert2.all.min.js"></script>
-        <script src="/Tesis/codigo.js"></script>
+<script src="/Tesis/assets/jquery/jquery-3.3.1.min.js"></script>
+<script src="/Tesis/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="/Tesis/assets/popper/popper.min.js"></script>
+<script src="/Tesis/assets/sweetalert2/sweetalert2.all.min.js"></script>
+<script src="/Tesis/codigo.js"></script>
 </body>
 </html>
